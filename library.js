@@ -47,24 +47,39 @@
 			port: serverIpPort.split(':')[1]
 		};
 
+		var data ={};
 
-		ssq.info(server.host, server.port, function(err, info) {
+		async.series([
+			function(next) {
+				ssq.info(server.host, server.port, function(err, info) {
+					if (err) {
+						console.log('Got error: ', err);
+						return callback(err);
+					}
+					data.info = info;
+					next();
+				});
+			},
+
+			function(next) {
+				if (data.numplayers < 1) return next();
+
+				ssq.players(server.host, server.port, function(err, players) {
+					if (err) {
+						console.log('Got error: ', err);
+						return callback(err);
+					}
+
+					data.players = players;
+				});
+			}
+		], function(err) {
 			if (err) {
 				console.log('Got error: ', err);
 				return callback(err);
 			}
-
-			ssq.players(server.host, server.port, function(err, players) {
-				if (err) {
-					console.log('Got error: ', err);
-					return callback(err);
-				}
-
-				html = templates.parse(html, {info: info, players: players});
-
-				callback(null, html);
-			});
-
+			html = templates.parse(html, {info: info, players: players});
+			callback(null, html);
 		});
 	};
 

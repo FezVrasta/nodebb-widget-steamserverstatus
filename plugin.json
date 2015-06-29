@@ -10,7 +10,7 @@
     "hooks": [
         { "hook": "static:app.load", "method": "init"},
         { "hook": "filter:widgets.getWidgets", "method": "defineWidget" },
-        { "hook": "filter:widget.render:status", "method": "renderStatusWidget" }
+        { "hook": "filter:widget.render:steamserverinfo", "method": "renderStatusWidget" }
     ],
     "css": [
     	"./public/style.css"

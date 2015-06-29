@@ -6,7 +6,7 @@
 		path = require('path'),
 		ssq = require('ssq'),
 		templates = module.parent.require('templates.js'),
-		app;
+			app;
 
 
 	var Widget = {
@@ -47,15 +47,23 @@
 			port: serverIpPort.split(':')[1]
 		};
 
-		ssq.info(server.host, server.port, function(err, data) {
+
+		ssq.info(server.host, server.port, function(err, info) {
 			if (err) {
 				console.log('Got error: ', err);
 				return callback(err);
 			}
 
-			html = templates.parse(html, data);
+			ssq.players(server.host, server.port, function(err, players) {
+				if (err) {
+					console.log('Got error: ', err);
+					return callback(err);
+				}
 
-			callback(null, html);
+				html = templates.parse(html, {info: info, players: players});
+
+				callback(null, html);
+			});
 
 		});
 	};

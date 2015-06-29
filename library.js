@@ -70,6 +70,11 @@
 						return callback(err);
 					}
 
+					players = players.map(function(player) {
+						player.duration = (new Date(players.duration * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
+						return player;
+					});
+
 					data.players = players;
 					next();
 				});

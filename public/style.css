@@ -1,4 +1,5 @@
 .steamserverstatus-info > p > span {
   display: block;
+  font-weight: bold;
 }
 

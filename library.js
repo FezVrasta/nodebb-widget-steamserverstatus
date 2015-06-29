@@ -78,7 +78,7 @@
 				console.log('Got error: ', err);
 				return callback(err);
 			}
-			html = templates.parse(html, {info: info, players: players});
+			html = templates.parse(html, data);
 			callback(null, html);
 		});
 	};

@@ -71,6 +71,7 @@
 					}
 
 					data.players = players;
+					next();
 				});
 			}
 		], function(err) {

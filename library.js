@@ -71,7 +71,7 @@
 					}
 
 					players = players.map(function(player) {
-						player.duration = (new Date(players.duration * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
+						player.duration = (new Date(player.duration * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
 						return player;
 					});
 

@@ -3,3 +3,14 @@
   font-weight: bold;
 }
 
+.steamserverstatus-players .player {
+  display: flex;
+}
+
+.steamserverstatus-players .player .name {
+  flex: 1;
+}
+
+.steamserverstatus-players .player .time {
+  opacity: 0.5;
+}

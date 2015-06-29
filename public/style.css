@@ -1,0 +1,21 @@
+.arrstatus-server-name{
+  font-size: 1.25em;
+  text-align: center;
+  margin: 0;
+}
+.arrstatus-server-status{
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+}
+.arrstatus-online{
+  color: green;
+}
+.arrstatus-offline{
+  color: red;
+}
+.arrstatus-credit{
+  font-size: .7em;
+  text-align: center;
+  margin: 10px 0 0;
+}

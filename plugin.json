@@ -1,0 +1,18 @@
+{
+    "id": "nodebb-widget-steamserverstatus",
+    "name": "Steam Server Status Widget",
+    "description": "Widget to provide informations about a server which supports Steam API.",
+    "url": "https://github.com/FezVrasta/nodebb-widget-steamserverstatus",
+    "library": "./library.js",
+    "staticDirs": {
+        "public": "public"
+    },
+    "hooks": [
+        { "hook": "filter:widgets.getWidgets", "method": "defineWidget" },
+        { "hook": "filter:widget.render:arrstatus", "method": "renderStatusWidget" }
+    ],
+    "css": [
+    	"./public/style.css"
+    ],
+    "templates": "./public/templates"
+}

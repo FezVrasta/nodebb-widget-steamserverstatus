@@ -1,0 +1,39 @@
+{
+  "name": "nodebb-widget-steamserverstatus",
+  "version": "0.1.0",
+  "description": "Widget to provide informations about a server which supports Steam API.",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FezVrasta/nodebb-widget-steamserverstatus.git"
+  },
+  "keywords": [
+    "steam",
+    "server",
+    "game",
+    "nodebb",
+    "widget",
+    "status"
+  ],
+  "author": {
+    "name": "FezVrasta"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FezVrasta/nodebb-widget-steamserverstatus/issues"
+  },
+  "homepage": "https://github.com/FezVrasta/nodebb-widget-steamserverstatus",
+  "_npmUser": {
+    "name": "fezvrasta",
+    "email": "federico.zivolo@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "fezvrasta",
+      "email": "federico.zivolo@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "ssq": "0.0.1"
+  }
+}

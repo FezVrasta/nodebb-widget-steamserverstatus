@@ -8,6 +8,7 @@
         "public": "public"
     },
     "hooks": [
+        { "hook": "static:app.load", "method": "init"},
         { "hook": "filter:widgets.getWidgets", "method": "defineWidget" },
         { "hook": "filter:widget.render:status", "method": "renderStatusWidget" }
     ],

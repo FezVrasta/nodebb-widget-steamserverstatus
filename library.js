@@ -39,7 +39,7 @@
 
 	Widget.renderStatusWidget = function(widget, callback) {
 
-		var html = Widget.templates['status.tpl'], cidOrtid;
+		var html = Widget.templates['status.tpl'];
 
 		var serverIpPort = widget.data.server;
 		var server = {

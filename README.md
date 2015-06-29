@@ -1,0 +1,1 @@
+This widget let's you display on your NodeBB website the status of your game server. It works using the Steam server API so your server must support them to make it work.

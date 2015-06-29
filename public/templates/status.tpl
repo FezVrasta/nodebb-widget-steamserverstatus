@@ -1,6 +1,6 @@
 <div class="steamserverstatus-info">
-    <p>Server name<span>{servername}</span></p>
-    <p>Players<span>{numplayers}/{maxplayers}</span></p>
+    <p>Server name<span>{info.servername}</span></p>
+    <p>Players<span>{info.numplayers}/{info.maxplayers}</span></p>
 </div>
 <div class="steamserverstatus-players">
     <!-- BEGIN players -->

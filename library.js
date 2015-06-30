@@ -62,7 +62,7 @@
 			},
 
 			function(next) {
-				if (data.numplayers < 1) return next();
+				if (data.info.numplayers < 1) return next();
 
 				ssq.players(server.host, server.port, function(err, players) {
 					if (err) {
@@ -73,7 +73,7 @@
 					players = players.map(function(player) {
 						if (!player.name) {
 							// If no name is defined, it's a ghost session, so we ignore it
-							data.numplayers--;
+							data.info.numplayers--;
 							return null;
 						}
 						player.duration = (new Date(player.duration * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];

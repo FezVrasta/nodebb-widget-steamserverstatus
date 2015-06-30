@@ -3,6 +3,20 @@
   font-weight: bold;
 }
 
+.steamserverstatus-info .status {
+  border-radius: 100%;
+  display: inline-block;
+  height: 0.8em;
+  margin-right: 0.5em;
+  width: 0.8em;
+}
+.steamserverstatus-info .status.-online {
+  background-color: rgb(0, 231, 0);
+}
+.steamserverstatus-info .status.-offline {
+  background-color: rgb(231, 0, 0);
+}
+
 .steamserverstatus-players .player {
   display: flex;
 }

@@ -1,6 +1,6 @@
 <!-- IF info.maxplayers -->
     <div class="steamserverstatus-info">
-        <p>Server name<span>{info.servername}</span></p>
+        <p>Server name<span><span class="status -online"></span>{info.servername}</span></p>
         <p>Players<span>{info.numplayers}/{info.maxplayers}</span></p>
     </div>
 
@@ -16,6 +16,6 @@
     <!-- ENDIF info.numplayers -->
 <!-- ELSE -->
     <div class="steamserverstatus-info">
-        <p>Server is offline</p>
+        <p><span class="status -offline"></span>Server is offline</p>
     </div>
 <!-- ENDIF info.maxplayers -->

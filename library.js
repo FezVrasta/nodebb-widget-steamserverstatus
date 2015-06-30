@@ -71,6 +71,11 @@
 					}
 
 					players = players.map(function(player) {
+						if (!player.name) {
+							// If no name is defined, it's a ghost session, so we ignore it
+							data.numplayers--;
+							return null;
+						}
 						player.duration = (new Date(player.duration * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
 						return player;
 					});

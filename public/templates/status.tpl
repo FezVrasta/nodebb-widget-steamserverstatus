@@ -1,15 +1,21 @@
-<div class="steamserverstatus-info">
-    <p>Server name<span>{info.servername}</span></p>
-    <p>Players<span>{info.numplayers}/{info.maxplayers}</span></p>
-</div>
-
-<!-- IF info.numplayers -->
-    <div class="steamserverstatus-players">
-        <!-- BEGIN players -->
-            <div class="player">
-                <span class="name">{players.name}</span>
-                <span class="time">{players.duration}</span>
-            </div>
-        <!-- END players -->
+<!-- IF info.maxplayers -->
+    <div class="steamserverstatus-info">
+        <p>Server name<span>{info.servername}</span></p>
+        <p>Players<span>{info.numplayers}/{info.maxplayers}</span></p>
     </div>
-<!-- ENDIF info.numplayers -->
+
+    <!-- IF info.numplayers -->
+        <div class="steamserverstatus-players">
+            <!-- BEGIN players -->
+                <div class="player">
+                    <span class="name">{players.name}</span>
+                    <span class="time">{players.duration}</span>
+                </div>
+            <!-- END players -->
+        </div>
+    <!-- ENDIF info.numplayers -->
+<!-- ELSE -->
+    <div class="steamserverstatus-info">
+        <p>Server is offline</p>
+    </div>
+<!-- ENDIF info.maxplayers -->

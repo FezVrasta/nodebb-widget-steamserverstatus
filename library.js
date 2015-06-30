@@ -52,10 +52,6 @@
 		async.series([
 			function(next) {
 				ssq.info(server.host, server.port, function(err, info) {
-					if (err) {
-						console.log('Got error: ', err);
-						return callback(err);
-					}
 					data.info = info;
 					next();
 				});
@@ -65,11 +61,6 @@
 				if (data.info.numplayers < 1) return next();
 
 				ssq.players(server.host, server.port, function(err, players) {
-					if (err) {
-						console.log('Got error: ', err);
-						return callback(err);
-					}
-
 					players = players.map(function(player) {
 						if (!player.name) {
 							// If no name is defined, it's a ghost session, so we ignore it
